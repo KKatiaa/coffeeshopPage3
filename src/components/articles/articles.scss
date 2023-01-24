@@ -1,0 +1,10 @@
+.positioning {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 30px;
+    grid-template-columns: 210px 210px 210px;
+    position: absolute;
+    top:95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

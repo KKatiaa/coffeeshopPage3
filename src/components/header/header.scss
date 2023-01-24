@@ -1,0 +1,122 @@
+@import "../header/_mediaQueryHeader.scss";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+$extColorWhite: #ffffff;
+
+@mixin header($size:1.7em) {
+    color: $extColorWhite;
+    font-size: $size;
+    font-family: 'Lucida Console', "Lucida Console", serif;
+}
+
+html {
+    font-size: 65%;
+
+    @include respond(tab-land) {
+        font-size: 58%;
+    }
+    @include respond(tab-port) {
+        font-size: 52%;
+    }
+    @include respond(phone) {
+        font-size: 32%;
+    }
+    @include respond(big-desktop) {
+        font-size: 80%;
+    }
+}
+
+.backgroundPicture {
+    height: 40vh;
+    background-image: linear-gradient(to right, rgba(178, 178, 178, 0.1), rgba(178, 178, 178, 0.4)), url(backpic2.png);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    overflow: hidden;
+    @media(max-width:75em) {
+        height: 35vh;
+    }
+    @media(max-width:56.25em) {
+        height: 30vh;
+    }
+    @media(max-width:37.5em) {
+        height: 20vh;
+    }
+    .headerMenu {
+        position: absolute;
+        top: 4rem;
+        left: 20rem;
+        animation: moveInVisibility 1s;
+        .logo {
+            height: 3.5rem;
+            margin-left: -12rem;
+        }
+        ul {
+            position: absolute;
+            top: 1rem;
+            left: -7rem;
+            display: flex;
+            @media(min-width:1800px) {
+                left: -3rem;
+            }
+            /*@media (max-width:600px){
+                display: block;
+                width: 100%;
+                width: auto;
+            }*/
+            li {
+                color: $extColorWhite;
+                display: inline-block;/*
+                @media (max-width:600px){
+                    display: block;
+                    width: 100%;
+                    width: auto;
+                } */
+            }
+            a {/*
+                @media (max-width:600px){
+                    display: inline;
+                    font-size: 500%;
+                    width: 100%;
+                }*/
+                @include header($size: 0.9em);
+                display: block;
+                font-size: 1.3em;
+                text-decoration: none;
+                &:hover {
+                    transform: translateY(3px);
+                    box-shadow: 0 2rem 3rem rgba(0, 0, 0, .2);
+                }
+                &:active {
+                    transform: translateY(1px);
+                    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+                }
+            }
+            .left {
+                margin-left: 3.5rem;
+            }
+        }
+    }
+}
+
+.centreText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+
+h1 {
+    @include header; 
+    font-size: 2.3em;
+    animation: moveInLeft 1s;
+}

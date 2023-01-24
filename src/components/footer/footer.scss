@@ -1,0 +1,52 @@
+$extColorWhite:rgb(0, 0, 0);
+
+.footer {
+    position: absolute;
+    top:145%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80%;
+    padding-bottom: 1%;
+    @media(max-width:75em) {
+        font-size: 58%;
+        top:70%;
+    }
+    @media(max-width:56.25em) {
+        font-size: 52%;
+        top:70%;
+    }
+    @media(max-width:37.5em) {
+        font-size: 95%;
+        top:90%;
+    }
+    @media(min-width:112.5em) {
+        font-size: 80%;
+    }  
+    .bheaderMenu{
+        display: flex;
+        margin: auto;
+        .bul {
+            text-align: center;
+            text-decoration: none;
+
+                display: flex;
+            li {
+                color:black;
+                font-weight: bolder;
+                list-style: none;
+                a {
+                    color: $extColorWhite;
+                    text-decoration: none;
+                    font-size: 1.3em;
+                    padding: 0% 2% 0% 2%;
+                    font-family: 'Lucida Console', "Lucida Console", serif;
+                }
+            }
+        }   
+    }
+}
+
+.e {
+    text-decoration: none;
+    color: red;
+}

@@ -1,0 +1,37 @@
+.dropdown {
+    position: absolute;
+    top:45%;
+    left:67%;
+    display: inline-block;
+    .dropbtn {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 1rem;
+        font-size: 1.7rem;
+        border: none;
+        font-family: 'Lucida Console', "Lucida Console", serif;
+        font-weight: bolder;
+    }  
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 16rem;
+        box-shadow: 0rem 0.5rem 1rem 0.5rem rgba(0,0,0,0.2);
+        z-index: 1;
+        button {
+            color: black;
+            border:none;
+            padding: 0.8rem 1rem;
+            font-family: 'Lucida Console', "Lucida Console", serif;
+            text-decoration: none;
+            display: block;
+        }
+    }
+  }
+
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #919391;}

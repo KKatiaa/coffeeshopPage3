@@ -1,0 +1,14 @@
+.searchingPanel{
+    display: flex;
+    position: absolute;
+    top: 45%;
+    left: 23%;
+    h2 {
+        font-family: 'Lucida Console', "Lucida Console", serif;
+        margin-right: 2%;
+    }
+    input {
+        box-shadow: 5px 5px 12px rgb(147, 147, 147);
+        border: 0px;
+    }
+}
